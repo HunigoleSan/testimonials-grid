@@ -1,0 +1,117 @@
+:root{
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    
+}
+h2{
+    position: relative;
+    z-index: 200;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Inter', sans-serif;
+}
+body{
+    font-size: 13px;
+    background: var(--light-grayish-blue);
+}
+img{
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+}
+.user-active{
+    border: 3px solid hsl(263, 74%, 62%);;
+}
+.grid{
+    max-height: 100vh;
+    padding: 150px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+.testimonials{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1em;
+    border-radius: 8px;
+}
+.pattern{
+    position: relative;
+    
+}
+.pattern::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 70%;
+    background-image: url("../images/bg-pattern-quotation.svg");
+    background-size: cover;
+    width: 124px;
+    height: 122px;
+    z-index: 1;
+}
+.g-col-2{
+    grid-column: 2 span;
+}
+.g-row-2{
+    grid-row: 1 / 3;
+}
+.g-col-s-4{
+    grid-column-start: 4;
+}
+.d-flex{
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+}
+span{
+    line-height: 1.6;
+}
+.bg-c-white{
+    background-color: var(--white);
+}
+.bg-c-violet{
+    background-color: var(--moderate-violet);
+}
+.p-color-white{
+    color: #fff;
+}
+.p-color-white-70{
+    color: rgba(255,255,255,70%);
+}
+.p-color-black-50{
+
+    color: rgba(25, 32, 46,50%);
+}
+.p-color-dark-gray{
+    color: rgba(72, 85, 106,100%);
+}
+.p-color-dark-gray-70{
+    color: rgba(25, 32, 46,70%);
+
+}
+.bg-c-dark-gray{
+    background-color: var(--very-dark-grayish-blue);
+}
+.bg-c-dark-black{
+    background-color: var(--very-dark-blackish-blue);
+}
+.shadow-b-r{
+    box-shadow: 10px 20px 5rem -3rem rgba(0,0,0,70%);   
+}
+.shadow-b{
+    box-shadow: 0px 25px 5rem -4rem rgba(0,0,0,70%);   
+}
+
