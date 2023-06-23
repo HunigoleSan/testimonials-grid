@@ -24,7 +24,7 @@ h2 {
 body {
     font-size: 13px;
     background: var(--light-grayish-blue);
-    padding: 150px;
+    padding: 125px;
     transition: padding 0.5s ease;
 }
 
@@ -150,7 +150,7 @@ span {
 }
 /* atribution*/
 .attribution{
-    margin: 1rem;
+    margin: 2rem 1rem 0rem 1rem;
     width: 100%;
     text-align: center;
 }
@@ -158,6 +158,69 @@ span {
     color: var(--moderate-violet);
     text-decoration: none;
 }
+.attribution > a:nth-child(2):hover{
+    color: rgb(248, 194, 94);
+    
+    text-shadow: 10px 10px 1rem var(--moderate-violet);
+}
+/**/
+
+[data-title] {
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+[data-title]:after {
+    content: attr(data-title);
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    font-family: Kano;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 25px;
+    top: -170%;
+    bottom: -1.6em;
+    left: 110%;  
+    white-space: nowrap;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+    border-radius: 6px;
+
+}
+[data-title]::before {
+    content: '';
+    width: 0;
+    height: 0px;
+    position: absolute;
+    visibility: hidden;
+    border-bottom: 20px solid #333;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: rotate(-135deg);
+    top: -90%;
+    left: 100%;
+    z-index: 99999;
+    opacity: 0;
+
+}
+[data-title]:hover:after {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+[data-title]:hover::before {
+    opacity: 1;
+
+    visibility: visible;
+}
+
 /* Responsive Media Querie*/
 /* gg */
 @media screen and (max-width: 1650px) {
